@@ -1,0 +1,24 @@
+{{#extends 'base'}}
+
+{{#block "content"}}
+    <h1>Fruits</h1>
+    <ul>
+    {{#each fruits}}
+        <li><span class="badge bg-primary">{{this}}</span></li>
+    {{/each}}
+    </ul>
+    Is Raining: {{raining}}
+
+    {{#if raining}}
+    <h1>Bring umbralla</h1>
+    {{/if}}
+
+    {{#ifEquals favourite 'apples'}}
+    <h1>You don't see doctor often.</h1>
+    {{else}}
+    <h1>You don't like apples</h1>
+    {{/ifEquals}}
+
+{{/block}}
+
+{{/extends}}
