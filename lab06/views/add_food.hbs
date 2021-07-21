@@ -1,0 +1,45 @@
+{{#extends 'base'}}
+
+{{#block "content"}}
+<form method="POST">
+    <div>
+        <label class="form-label">Full Name</label>
+        {{!-- input type must have a name --}}
+        <input type="text" class="form-control" name="fullname" />
+    </div>
+    <div>
+        <label class="form-label">Meal</label>
+        <input type="radio" value="breakfast" name="meal"/><label>Breakfast</label>
+        <input type="radio" value="lunch" name="meal" /><label>Lunch</label>
+        <input type="radio" value="dinner" name="meal" /><label>Dinner</label>
+    </div>
+    <div>
+        <label class="form-label">Tags</label>
+        <input type="checkbox" value="vegan" name="tags" /><label>Vegan</label>
+        <input type="checkbox" value="diary-free" name="tags" /><label>Diary-free</label>
+        <input type="checkbox" value="gluten-free" name="tags" /><label>Gluten-free</label>
+        <input type="checkbox" value="homecooked" name="tags" /><label>Homecooked</label>
+    </div>
+    <div>
+        <label class="form-label">Cuisine</label>
+        <select class="form-control" name="cuisine">
+            <option value="chinese">Chinese</option>
+            <option value="malay">Malay</option>
+            <option value="indian">Indian</option>
+            <option value="others">Others</option>
+        </select>
+    </div>
+    <div>
+        <label class="form-label">Ingredients</label>
+        <select class="form-control" name="ingredients" multiple>
+            <option value="chicken">Chicken</option>
+            <option value="duck">Duck</option>
+            <option value="potato">Potato</option>
+        </select>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary my-3" />
+</form>
+
+{{/block}}
+
+{{/extends}}

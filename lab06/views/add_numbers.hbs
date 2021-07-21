@@ -1,0 +1,24 @@
+{{#extends 'base'}}
+
+{{#block "content"}}
+<form method="POST">
+    <div>
+        <label>Number 1:</label>
+        <input type="text" class="form-control" name="first_number" />
+    </div>
+    <div>
+        <label>Number 2:</label>
+        <input type="text" class="form-control" name="second_number" />
+    </div>
+    <div>
+        <label>Operation</label>
+        <input type="radio" value="add" name="operation"><label>Add</label>
+        <input type="radio" value="subtract" name="operation"><label>Subtract</label>
+        <input type="radio" value="multiply" name="operation"><label>Multiply</label>
+    </div>
+    <input type="submit" value="Add" class="btn btn-primary my-3" />
+</form>
+
+{{/block}}
+
+{{/extends}}
