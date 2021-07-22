@@ -1,0 +1,25 @@
+{{#extends 'base'}}
+
+{{#block "content"}}
+<form method="POST">
+    <div>
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" name="name" />
+    </div>
+    <div>
+        <label class="form-label">Category</label>
+        <input type="text" class="form-control" name="category" />
+    </div>
+    <div>
+        <label class="form-label">Status</label>
+        <input type="radio" name="status" value="available" /><label>Available</label>
+        <input type="radio" name="status" value="pending" /><label>Pending</label>
+        <input type="radio" name="status" value="sold" /><label>Sold</label>
+    </div>
+
+    <input type="submit" value="Add New Pet" class="btn btn-primary my-3" />
+</form>
+
+{{/block}}
+
+{{/extends}}
