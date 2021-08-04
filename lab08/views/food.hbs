@@ -17,7 +17,7 @@
         {{#each foodRecords}}
         <tr>
             <td>
-                {{this.foodName}}
+                <a href="/food_record/{{this._id}}">{{this.foodName}}</a>
             </td>
             <td>
                 {{this.calories}}
@@ -28,6 +28,7 @@
             <td>
                 <a href="/food_record/{{this._id}}/update" class="btn btn-primary btn-sm">Edit</a>
                 <a href="/food_record/{{this._id}}/delete" class="btn btn-danger btn-sm">Delete</a>
+                <a href="/food_record/{{this._id}}/notes/add" class="btn btn-success btn-sm">Add New Note</a>
             </td>
         </tr>
         {{/each}}
