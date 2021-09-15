@@ -97,7 +97,7 @@ async function main() {
         }
 
         let db = MongoUtil.getDB();
-        let results = await db.collection('food_sighting').find({}).toArray();
+        let results = await db.collection('food_sighting').find(criteria).toArray();
         res.json(results);
     })
 }
