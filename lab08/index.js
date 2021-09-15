@@ -110,6 +110,7 @@ async function main() {
         db.collection('food').updateOne({
             '_id': ObjectId(id)
         },{
+            // $set = update specific elements
             '$set':{
                 'foodName': foodName,
                 'calories':calories,
@@ -161,6 +162,7 @@ async function main() {
         let response = await db.collection('food').updateOne({
             '_id': ObjectId(id)
         },{
+            // $push = insert
             '$push': {
                 'notes': {
                     '_id': new ObjectId(),
@@ -188,6 +190,7 @@ async function main() {
         let results = await db.collection('food').findOne({
             'notes._id': ObjectId(req.params.noteid)
         }, {
+            // projection = selects specific elements
             'projection': {
                 'notes': {
                     '$elemMatch': {
